@@ -13,7 +13,6 @@ const Projects = () => {
         if (currProjType === "All") {
             setProjects(projectsList)
         } else {
-            console.log(" beo: ", currProjType)
             setProjects(projectsList.filter(item => item.tags.includes(currProjType)))
         }
         
@@ -36,7 +35,7 @@ const Projects = () => {
 
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2">
                 {
-                    projectsList && projectsList.map((item, index)=>{
+                    projects && projects.map((item, index)=>{
                         return(
                             <ProjectItem key={index} details={item} />
                         )   

@@ -23,7 +23,7 @@ export default function Home() {
   }, [currentPage])
 
   return (
-    <div className={`flex flex-col w-screen relative ${inter.className} h-screen overflow-x-hidden`}>
+    <div className={`${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
       <RiArrowLeftSLine onClick={() => {
       }} className="text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
 

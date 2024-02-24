@@ -7,20 +7,6 @@
         "link": "https://github.com/Maneeshk11/Data-structures"
     }, 
     {
-        "title": "Algorithms in HPC",
-        "tags": ["C++"],
-        "description": "",
-        "image": "https://portfoliomkaonlel.imgix.net/hpcalgo.jpeg",
-        "link": ""
-    },
-    {
-        "title": "Seismic Damage Assessment of buildings",
-        "tags": ["Full-stack"],
-        "description": "",
-        "image": "https://portfoliomkaonlel.imgix.net/seismic.png",
-        "link": ""
-    },
-    {
         "title": "RateMUProfessors",
         "tags": ["Full-stack"],
         "description": "",
@@ -28,24 +14,52 @@
         "link": ""
     },
     {
+        "title": "Algorithms in HPC",
+        "tags": ["C++"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/hpcalgo.jpeg",
+        "link": ""
+    },
+    {
+        "title": "MU Previous Year Papers",
+        "tags": ["Full-stack"],
+        "description": "A website for MU students to access all the past exam papers for preperation.",
+        "image": "https://portfoliomkaonlel.imgix.net/previouspapers.jpg",
+        "link": "https://github.com/Maneeshk11/mu_previos_papers_be"
+    },
+    {
+        "title": "Seismic damage assessment of buildings",
+        "tags": ["Full-stack"],
+        "description": "Frontend implementation of a program that simulates the effects on a building due to seismic activity.",
+        "image": "https://portfoliomkaonlel.imgix.net/seismic.png",
+        "link": ""
+    },
+    {
+        "title": "CUDA implementation of Algorithms",
+        "tags": ["C++"],
+        "description": "Parallelizing algorithms utilizing the GPU, powered by CUDA.",
+        "image": "https://portfoliomkaonlel.imgix.net/cuda.jpg",
+        "link": "https://github.com/Maneeshk11/GPU-Programming"
+    },
+    {
         "title": "Optimizating non-linear programming methods",
         "tags": ["Python", "Full-stack"],
-        "description": "",
+        "description": " Repository containing non-linear approximation techniques discussed at undergrad level.",
         "image": "https://portfoliomkaonlel.imgix.net/contour.png",
-        "link": ""
+        "link": "https://github.com/Maneeshk11/3rd-year-project"
     }, 
+    {
+        "title": "RAFT Consensus Algorithm (Implementation)",
+        "tags": ["Crypto", "Python"],
+        "description": "Implementation of Consensus Algorithm developed Diego Ongaro and John Ousterhout (Stanford. 2013)",
+        "image": "https://portfoliomkaonlel.imgix.net/raft.png",
+        "link": "https://github.com/Maneeshk11/Raft-Consensus-Algorithm-NodeRunner-Hackathon"
+    },
     {
         "title": "NYSE-Datasets analysis using Hadoop",
         "tags": ["Python"],
         "description": "",
         "image": "https://portfoliomkaonlel.imgix.net/nyse.jpg",
-        "link": ""
-    },
-    {
-        "title": "RAFT Consensus Algorithm (Implementation)",
-        "tags": ["Crypto"],
-        "description": "",
-        "image": "https://portfoliomkaonlel.imgix.net/raft.png",
         "link": ""
     }
 ]
