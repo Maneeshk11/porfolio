@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Library of Data Structures",
+        "tags": ["C++"],
+        "description": "A repository of a wide range of data structures and algorithms",
+        "image": "https://portfoliomkaonlel.imgix.net/ds.png",
+        "link": "https://github.com/Maneeshk11/Data-structures"
+    }, 
+    {
+        "title": "Algorithms in HPC",
+        "tags": ["C++"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/hpcalgo.jpeg",
+        "link": ""
+    },
+    {
+        "title": "Seismic Damage Assessment of buildings",
+        "tags": ["Full-stack"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/seismic.png",
+        "link": ""
+    },
+    {
+        "title": "RateMUProfessors",
+        "tags": ["Full-stack"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/ratemuprofs.png",
+        "link": ""
+    },
+    {
+        "title": "Optimizating non-linear programming methods",
+        "tags": ["Python", "Full-stack"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/contour.png",
+        "link": ""
+    }, 
+    {
+        "title": "NYSE-Datasets analysis using Hadoop",
+        "tags": ["Python"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/nyse.jpg",
+        "link": ""
+    },
+    {
+        "title": "RAFT Consensus Algorithm (Implementation)",
+        "tags": ["Crypto"],
+        "description": "",
+        "image": "https://portfoliomkaonlel.imgix.net/raft.png",
+        "link": ""
+    }
+]
