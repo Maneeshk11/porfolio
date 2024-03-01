@@ -25,14 +25,14 @@ export default function Home() {
   return (
     <div className={`${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
       <RiArrowLeftSLine onClick={() => {
-      }} className="text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
+      }} className="hidden lg:block text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
 
       <Navbar setOpen={setOpenSidebar} setCurrentPage={setCurrentPage} />
       {/* <SideBar /> */}
 
       <ContentPage pageLoc={pageLocation} />
 
-      <RiArrowRightSLine className="text-7xl absolute top-1/2 z-50 right-0 cursor-pointer" />
+      <RiArrowRightSLine className="hidden lg:block text-7xl absolute top-1/2 z-50 right-0 cursor-pointer" />
     </div>
   );
 }
