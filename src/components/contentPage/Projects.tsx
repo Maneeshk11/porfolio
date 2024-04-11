@@ -22,16 +22,16 @@ const Projects = () => {
     return (
         <div id="projects" className="flex flex-col items-center gap-y-6 pt-8 w-screen flex-shrink-0">
             <span className="font-semibold text-5xl">My <span className=
-                "font-semibold text-5xl bg-gradient-to-r from-blue-300 to-blue-500 text-transparent bg-clip-text"> projects</span></span>
+                "font-semibold text-5xl bg-gradient-to-r from-[#ffcbf2] to-[#deaaff] text-transparent bg-clip-text"> Projects</span></span>
 
             <span className="w-4/5 sm:w-fit mx-auto text-wrap sm:text-xl text-center">Here is a list of several projects I have worked on ...</span>
             <div className=" w-3/5 mx-auto sm:w-fit flex flex-row justify-center flex-wrap gap-x-2 gap-y-3 items-center">
-                <Tag title="All" onClick={() => { setCurrProjType("All") }} />
+                <Tag title="All" border={true} onClick={() => { setCurrProjType("All") }} />
                 <Tag title="C++" onClick={() => { setCurrProjType("C++") }} />
                 <Tag title="Python" onClick={() => { setCurrProjType("Python") }} />
                 <Tag title="Full-stack" onClick={() => { setCurrProjType("Full-stack") }} />
                 <Tag title="Crypto" onClick={() => { setCurrProjType("Crypto") }} />
-                <Tag title="Mini-Projects" onClick={() => { setCurrProjType("Mini-Projects") }} />
+                <Tag title="Open Source" onClick={() => { setCurrProjType("Mini-Projects") }} />
             </div>
 
             <div className="px-8 relative">

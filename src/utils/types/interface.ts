@@ -8,8 +8,9 @@ export interface Project {
 }
 
 export const TagColors = {
-    "C++": "#168fff",
-    "Python": "#28ce51",
-    "Full-stack": "#aa2efc",
-    "Crypto": "#00c5c5",
+    "C++": "#b5179e",
+    "Python": "#7209b7",
+    "Full-stack": "#560bad",
+    "Crypto": "#3a0ca3",
+    "Open Source": "#3f37c9"
 }
