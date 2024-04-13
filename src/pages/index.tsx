@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 // import SideBar from "@/components/navbar/sidebar";
 import ContentPage from "@/components/contentPage/ContentPage";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import MouseTracker from "@/components/MouseTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +24,10 @@ export default function Home() {
   }, [currentPage])
 
   return (
-    <div className={`${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
+    <div id="ourbody" className={` ${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
       <RiArrowLeftSLine onClick={() => {
       }} className="hidden lg:block text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
-
+      <MouseTracker />
       <Navbar setOpen={setOpenSidebar} setCurrentPage={setCurrentPage} />
       {/* <SideBar /> */}
 

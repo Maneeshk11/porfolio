@@ -13,10 +13,11 @@ const Timestamp:FC<TimestampProps> = ({className, title, position, timeperiod, r
     const Tag = ({position, title, timeperiod, role} : {position?:string, title: string, 
         timeperiod:string, role:string }) => {
         return (
-            <div className={`absolute h-28 ${position === "top" ? "-top-28 " : "top-full justify-end"} left-1.5 flex flex-col border-l px-2 border-y-slate-300`}>
-                <span className="text-lg font-semibold">{title}</span>
-                <span className="text-xs font-bold">{timeperiod}</span>
-                <span className="text-xs font-light">{role}</span>
+            <div className={`absolute h-28 ${position === "top" ? "bottom-full" : "top-full justify-end"} left-1.5 flex flex-col border-l px-2 border-y-slate-300
+            transform duration-100 hover:h-40 cursor-pointer`}>
+                <span className="lg:text-base text-xs font-semibold">{title}</span>
+                <span className="lg:text-xs text-[10px] font-medium">{timeperiod}</span>
+                <span className="lg:text-xs text-[10px] font-light">{role}</span>
             </div>
         )
     }

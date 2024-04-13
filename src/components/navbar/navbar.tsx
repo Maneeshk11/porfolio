@@ -15,7 +15,7 @@ const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
 
     const NavItem: FC<{ title?: string, route: string, children?: ReactNode, setPage?: () => void }> = ({ title, route, children, setPage }) => {
         return (
-            <Link href={route} onClick={setPage}>
+            <Link href={route} onClick={setPage} target={title ? undefined : "_blank"}>
                 {children}
                 {title && <span className={`font-medium text-base cursor-pointer`}>{title}</span>}
             </Link>
@@ -42,10 +42,10 @@ const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
             </div>
 
             <div className={`hidden lg:flex flex-col lg:flex-row md:gap-x-3 lg:gap-x-5 lg:w-1/3 justify-end lg:h-auto`}>
-                <NavItem title="Home" route="#" setPage={()=>{setCurrentPage(1)}} />
-                <NavItem title="About" route="#" setPage={()=>{setCurrentPage(2)}} />
-                <NavItem title="Projects" route="#" setPage={()=>{setCurrentPage(3)}} />
-                <NavItem title="Contact" route="#" setPage={()=>{setCurrentPage(4)}} />
+                <NavItem title="About" route="#" setPage={()=>{setCurrentPage(1)}} />
+                {/* <NavItem title="Skills" route="#" setPage={()=>{setCurrentPage(2)}} /> */}
+                <NavItem title="Projects" route="#" setPage={()=>{setCurrentPage(2)}} />
+                <NavItem title="Contact" route="#" setPage={()=>{setCurrentPage(3)}} />
             </div>
 
             <RxHamburgerMenu className="w-8 h-8 lg:hidden cursor-pointer" onClick={()=>{setOpen(true)}}/>
