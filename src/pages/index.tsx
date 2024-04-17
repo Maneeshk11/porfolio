@@ -33,7 +33,7 @@ export default function Home() {
 
       <ContentPage pageLoc={pageLocation} />
 
-      <video autoPlay loop muted className="absolute h-screen inset-0 -z-10 invert opacity-50">
+      <video autoPlay loop muted className="absolute h-screen inset-0 -z-10 invert opacity-60">
         <source src="/bg-vid.mp4"
           type="video/mp4" />
       </video>
