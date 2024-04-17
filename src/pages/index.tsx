@@ -33,6 +33,11 @@ export default function Home() {
 
       <ContentPage pageLoc={pageLocation} />
 
+      <video autoPlay loop muted className="absolute h-screen inset-0 -z-10 invert opacity-50">
+        <source src="/bg-vid.mp4"
+          type="video/mp4" />
+      </video>
+
       <RiArrowRightSLine className="hidden lg:block text-7xl absolute top-1/2 z-50 right-0 cursor-pointer" />
     </div>
   );
