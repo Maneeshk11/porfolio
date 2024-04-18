@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ContentPage from "@/components/contentPage/ContentPage";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import MouseTracker from "@/components/MouseTracker";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,17 @@ export default function Home() {
     <div id="ourbody" className={` ${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
       <RiArrowLeftSLine onClick={() => {
       }} className="hidden lg:block text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
+      
+      <Head>
+        <title>Maneesh Kolli</title>
+        <meta
+          name="Portfolio of Maneesh Kolli"
+          content="Portfolio of Maneesh Kolli"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Vectormk.png" />
+      </Head>
+
       <MouseTracker />
       <Navbar setOpen={setOpenSidebar} setCurrentPage={setCurrentPage} />
       {/* <SideBar /> */}
