@@ -39,3 +39,7 @@ body {
 .projectsDiv {
   scrollbar-width: none;
 }
+
+.toast-position {
+  top: -6rem !important;
+}
