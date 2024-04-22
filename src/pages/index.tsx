@@ -27,8 +27,11 @@ export default function Home() {
   return (
     <div id="ourbody" className={` ${inter.className} flex flex-col w-screen relative h-screen overflow-x-hidden`}>
       <RiArrowLeftSLine onClick={() => {
+        if (currentPage > 1) {
+          setCurrentPage(p => p - 1)
+        }
       }} className="hidden lg:block text-7xl absolute top-1/2 z-50 left-0 cursor-pointer" />
-      
+
       <Head>
         <title>Maneesh Kolli</title>
         <meta
@@ -50,7 +53,10 @@ export default function Home() {
           type="video/mp4" />
       </video>
 
-      <RiArrowRightSLine className="hidden lg:block text-7xl absolute top-1/2 z-50 right-0 cursor-pointer" />
+      <RiArrowRightSLine className="hidden lg:block text-7xl absolute top-1/2 z-50 right-0 cursor-pointer"
+        onClick={() => {
+          if (currentPage < 3) setCurrentPage(p => p + 1)
+        }} />
     </div>
   );
 }
