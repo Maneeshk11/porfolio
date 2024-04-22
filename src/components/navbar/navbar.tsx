@@ -43,9 +43,10 @@ const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
 
             <div className={`hidden lg:flex flex-col lg:flex-row md:gap-x-3 lg:gap-x-5 lg:w-1/3 justify-end lg:h-auto`}>
                 <NavItem title="About" route="" setPage={()=>{setCurrentPage(1)}} />
-                {/* <NavItem title="Skills" route="#" setPage={()=>{setCurrentPage(2)}} /> */}
                 <NavItem title="Projects" route="" setPage={()=>{setCurrentPage(2)}} />
-                <NavItem title="Contact" route="" setPage={()=>{setCurrentPage(3)}} />
+                
+                <NavItem title="Blog" route="" setPage={()=>{setCurrentPage(3)}} />
+                <NavItem title="Contact" route="" setPage={()=>{setCurrentPage(4)}} />
             </div>
 
             <RxHamburgerMenu className="w-8 h-8 lg:hidden cursor-pointer" onClick={()=>{setOpen(true)}}/>
