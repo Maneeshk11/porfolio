@@ -4,13 +4,14 @@ import { FaIdCard } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Dispatch, FC, ReactNode, SetStateAction, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavProps {
     setOpen: Dispatch<SetStateAction<boolean>>
     setCurrentPage: Dispatch<SetStateAction<number>>
 }
 
-const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
+const Navbar: FC<NavProps> = ({ setOpen, setCurrentPage }) => {
 
 
     const NavItem: FC<{ title?: string, route: string, children?: ReactNode, setPage?: () => void }> = ({ title, route, children, setPage }) => {
@@ -23,8 +24,10 @@ const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
     }
 
     return (
-        <div className="px-5 py-2 flex flex-row items-center justify-between relative overflow-x-hidden overflow-y-auto">
-            <span className=" bg-logo-img bg-cover text-transparent bg-clip-text font-black text-[38px] cursor-default">MK</span>
+        <div className="px-5 py-5 flex flex-row items-center justify-between relative overflow-x-hidden overflow-y-auto">
+
+            <Image alt="logo" src={"/mklogo.svg"} width={210} height={50}
+                onClick={() => { setCurrentPage(1) }} />
             <span className="flex-grow hidden lg:block"></span>
             <div className="hidden sm:flex flex-row gap-x-5 lg:w-1/3 justify-center">
                 <NavItem route="https://github.com/Maneeshk11">
@@ -42,13 +45,13 @@ const Navbar:FC<NavProps> = ({setOpen, setCurrentPage}) => {
             </div>
 
             <div className={`hidden lg:flex flex-col lg:flex-row md:gap-x-3 lg:gap-x-5 lg:w-1/3 justify-end lg:h-auto`}>
-                <NavItem title="About" route="" setPage={()=>{setCurrentPage(1)}} />
+                <NavItem title="About" route="" setPage={() => { setCurrentPage(1) }} />
                 {/* <NavItem title="Skills" route="#" setPage={()=>{setCurrentPage(2)}} /> */}
-                <NavItem title="Projects" route="" setPage={()=>{setCurrentPage(2)}} />
-                <NavItem title="Contact" route="" setPage={()=>{setCurrentPage(3)}} />
+                <NavItem title="Projects" route="" setPage={() => { setCurrentPage(2) }} />
+                <NavItem title="Contact" route="" setPage={() => { setCurrentPage(3) }} />
             </div>
 
-            <RxHamburgerMenu className="w-8 h-8 lg:hidden cursor-pointer" onClick={()=>{setOpen(true)}}/>
+            <RxHamburgerMenu className="w-8 h-8 lg:hidden cursor-pointer" onClick={() => { setOpen(true) }} />
 
         </div>
     )
