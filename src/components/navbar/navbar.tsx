@@ -27,7 +27,7 @@ const Navbar: FC<NavProps> = ({ setOpen, setCurrentPage }) => {
         <div className="px-5 py-5 flex flex-row items-center justify-between relative overflow-x-hidden overflow-y-auto">
 
             <Image alt="logo" src={"/mklogo.svg"} width={210} height={50}
-                onClick={() => { setCurrentPage(1) }} />
+                onClick={() => { setCurrentPage(1) }} className="cursor-pointer" />
             <span className="flex-grow hidden lg:block"></span>
             <div className="hidden sm:flex flex-row gap-x-5 lg:w-1/3 justify-center">
                 <NavItem route="https://github.com/Maneeshk11">
