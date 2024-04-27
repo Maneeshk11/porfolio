@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaIdCard } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Dispatch, FC, ReactNode, SetStateAction, useState } from "react";
+import { Dispatch, FC, ReactNode, SetStateAction } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,8 +26,9 @@ const Navbar: FC<NavProps> = ({ setOpen, setCurrentPage }) => {
     return (
         <div className="px-5 py-5 flex flex-row items-center justify-between relative overflow-x-hidden overflow-y-auto">
 
-            <Image alt="logo" src={"/mklogo.svg"} width={210} height={50}
-                onClick={() => { setCurrentPage(1) }} className="cursor-pointer" />
+            <div onClick={() => {setCurrentPage(1)}} className="cursor-pointer">
+                <Image alt="logo" src={"/mklogo.svg"} width={210} height={50} priority={true} />
+            </div>
             <span className="flex-grow hidden lg:block"></span>
             <div className="hidden sm:flex flex-row gap-x-5 lg:w-1/3 justify-center">
                 <NavItem route="https://github.com/Maneeshk11">
@@ -46,9 +47,9 @@ const Navbar: FC<NavProps> = ({ setOpen, setCurrentPage }) => {
 
             <div className={`hidden lg:flex flex-col lg:flex-row md:gap-x-3 lg:gap-x-5 lg:w-1/3 justify-end lg:h-auto`}>
                 <NavItem title="About" route="" setPage={() => { setCurrentPage(1) }} />
-                {/* <NavItem title="Skills" route="#" setPage={()=>{setCurrentPage(2)}} /> */}
                 <NavItem title="Projects" route="" setPage={() => { setCurrentPage(2) }} />
-                <NavItem title="Contact" route="" setPage={() => { setCurrentPage(3) }} />
+                <NavItem title="Blog" route="" setPage={() => { setCurrentPage(3) }} />
+                <NavItem title="Contact" route="" setPage={() => { setCurrentPage(4) }} />
             </div>
 
             <RxHamburgerMenu className="w-8 h-8 lg:hidden cursor-pointer" onClick={() => { setOpen(true) }} />

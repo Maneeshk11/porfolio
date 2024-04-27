@@ -55,7 +55,7 @@ export default function Home() {
 
       <RiArrowRightSLine className="hidden lg:block text-7xl absolute top-1/2 z-50 right-0 cursor-pointer"
         onClick={() => {
-          if (currentPage < 3) setCurrentPage(p => p + 1)
+          if (currentPage < 4) setCurrentPage(p => p + 1)
         }} />
     </div>
   );
