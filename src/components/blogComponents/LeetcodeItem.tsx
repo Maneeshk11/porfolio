@@ -18,7 +18,7 @@ const LeetcodeItem: FC<LeetcodeItemProps> = ({ title, problemType, setIsOpen, se
                 setTitle(title);
                 setFilename(filename);
             }}>
-            <div className={`w-4 aspect-square rounded-full ${problemType === "easy" ? "bg-[#00b8a3]" : problemType === "medium" ? "bg-[#ffc01e]" : "bg-[#fe365e]"} `}></div>
+            <div className={`w-4 aspect-square rounded-full ${problemType.toLowerCase() === "easy" ? "bg-[#00b8a3]" : problemType.toLowerCase()  === "medium" ? "bg-[#ffc01e]" : "bg-[#fe365e]"} `}></div>
             <span>{title}</span>
         </div>
     )
