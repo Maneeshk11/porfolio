@@ -12,7 +12,7 @@ interface LeetcodeItemProps {
 const LeetcodeItem: FC<LeetcodeItemProps> = ({ title, problemType, setIsOpen, setTitle, setFilename, filename }) => {
 
     return (
-        <div className="h-12 w-56 bg-[#1d1d1d] rounded overflow-hidden p-2 flex items-center cursor-pointer gap-x-3 text-nowrap"
+        <div className="h-10 w-36 sm:w-40 md:w-56 text-sm bg-[#1d1d1d] rounded overflow-hidden p-2 flex items-center cursor-pointer gap-x-3 text-nowrap"
             onClick={() => { 
                 setIsOpen(true);
                 setTitle(title);

@@ -1,10 +1,11 @@
 import LeetcodeItem from "./LeetcodeItem"
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 
 import { Problem } from "@/utils/types/interface";
 import { Dialog } from "@headlessui/react";
 import { Inter } from "next/font/google"
 import LeetcodeMarkdown from "./LeetcodeMarkdown";
+import Loader from "../icons/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,10 +42,10 @@ const Leetcode = () => {
     return (
         <div className="flex flex-col gap-y-8">
             <div className="flex w-full flex-row items-center justify-between">
-                <span className="text-4xl font-semibold">LeetCode</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-semibold">LeetCode</span>
                 <button className="border border-white rounded p-2 text-lg font-bold">Filter</button>
             </div>
-            <div className="grid grid-flow-row grid-cols-4 gap-3">
+            <div className="grid grid-flow-row grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3">
                 {
                     problems.map((problem, index) => (
                         <LeetcodeItem key={index} problemType={problem.problemType} title={problem.title} setIsOpen={setIsOpen}
@@ -54,13 +55,18 @@ const Leetcode = () => {
             </div>
             <Dialog
                 open={isOpen}
-                onClose={() => setIsOpen(false)}
+                onClose={() => {
+                    setIsOpen(false)
+                    setMdx("")
+                }}
                 className="relative z-50"
             >
                 <div className="fixed inset-0 bg-black/60" aria-hidden="true" />
                 <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
                     <Dialog.Panel className={`${inter.className} max-w-none w-[70rem] prose prose-code:text-[#e6edf3] bg-[#1e293b] prose-strong:text-[#e6edf3] prose-slate prose-headings:text-[#e6edf3] prose-h4:font-bold prose-code:before:hidden prose-code:after:hidden text-[#e6edf3] rounded-xl mx-auto h-[70vh] p-14 overflow-scroll relative`}>
-                        <LeetcodeMarkdown mdx={mdx} />
+                        <Suspense fallback={<Loader />}>
+                            <LeetcodeMarkdown mdx={mdx} />
+                        </Suspense>
                     </Dialog.Panel>
                 </div>
             </Dialog >

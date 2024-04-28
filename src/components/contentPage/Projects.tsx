@@ -30,9 +30,9 @@ const Projects = () => {
 
 
     return (
-        <div id="projects" className="flex flex-col items-center gap-y-6 pt-8 w-screen flex-shrink-0">
-            <span className="font-semibold text-5xl">My <span className=
-                "font-semibold text-5xl bg-gradient-to-r from-[#ffcbf2] to-[#deaaff] text-transparent bg-clip-text"> Projects</span></span>
+        <div id="projects" className="flex flex-col items-center gap-y-6 pt-5 lg:pt-8 w-screen flex-shrink-0">
+            <span className="font-semibold text-4xl md:text-5xl">My <span className=
+                "font-semibold text-4xl md:text-5xl bg-gradient-to-r from-[#ffcbf2] to-[#deaaff] text-transparent bg-clip-text"> Projects</span></span>
 
             <span className="w-4/5 sm:w-fit mx-auto text-wrap sm:text-xl text-center">Here is a list of several projects I have worked on ...</span>
             <div className=" w-3/5 mx-auto sm:w-fit flex flex-row justify-center flex-wrap gap-x-2 gap-y-3 items-center">
