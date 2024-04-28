@@ -57,7 +57,6 @@ const Leetcode = () => {
                 open={isOpen}
                 onClose={() => {
                     setIsOpen(false)
-                    setMdx("")
                 }}
                 className="relative z-50"
             >
