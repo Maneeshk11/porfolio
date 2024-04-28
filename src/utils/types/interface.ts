@@ -19,4 +19,5 @@ export interface Problem {
     title: string;
     problemType: string;
     tags: string[];
+    filename: string;
 }

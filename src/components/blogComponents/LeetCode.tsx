@@ -14,6 +14,7 @@ const Leetcode = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [problems, setProblems] = useState<Problem[]>([])
     const [title, setTitle] = useState<string>("")
+    const [filename, setFilename] = useState<string>("")
     const [mdx, setMdx] = useState<string>("")
 
 
@@ -29,7 +30,7 @@ const Leetcode = () => {
     useEffect(() => {
         if (title !== "") {
             (async () => {
-                const mdxfile = await fetch(`https://raw.githubusercontent.com/Maneeshk11/leetcode-solutions/main/solutions/${title}.mdx`)
+                const mdxfile = await fetch(`https://raw.githubusercontent.com/Maneeshk11/leetcode-solutions/main/solutions/${filename}.mdx`)
                     .then(res => res.text())
                 setMdx(mdxfile)
             })()
@@ -47,7 +48,7 @@ const Leetcode = () => {
                 {
                     problems.map((problem, index) => (
                         <LeetcodeItem key={index} problemType={problem.problemType} title={problem.title} setIsOpen={setIsOpen}
-                            setTitle={setTitle} />
+                            setTitle={setTitle} setFilename={setFilename} filename={problem.filename} />
                     ))
                 }
             </div>
