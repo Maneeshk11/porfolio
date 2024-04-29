@@ -52,6 +52,12 @@ const Leetcode = () => {
                             setTitle={setTitle} setFilename={setFilename} filename={problem.filename} />
                     ))
                 }
+                {
+                    problems.map((problem, index) => (
+                        <LeetcodeItem key={index} problemType={problem.problemType} title={problem.title} setIsOpen={setIsOpen}
+                            setTitle={setTitle} setFilename={setFilename} filename={problem.filename} />
+                    ))
+                }
             </div>
             <Dialog
                 open={isOpen}
