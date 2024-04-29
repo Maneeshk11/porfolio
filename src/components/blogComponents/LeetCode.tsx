@@ -62,7 +62,7 @@ const Leetcode = () => {
             >
                 <div className="fixed inset-0 bg-black/60" aria-hidden="true" />
                 <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-                    <Dialog.Panel className={`${inter.className} max-w-none w-[70rem] prose prose-code:text-[#e6edf3] bg-[#1e293b] prose-strong:text-[#e6edf3] prose-slate prose-headings:text-[#e6edf3] prose-h4:font-bold prose-code:before:hidden prose-code:after:hidden text-[#e6edf3] rounded-xl mx-auto h-[70vh] p-14 overflow-scroll relative`}>
+                    <Dialog.Panel className={`${inter.className} max-w-none w-[70rem] prose prose-code:text-[#5cb0f9] bg-[#1e293b] prose-strong:text-[#e6edf3] prose-slate prose-headings:text-[#e6edf3] prose-h4:font-bold prose-code:before:hidden prose-code:after:hidden text-[#e6edf3] rounded-xl mx-auto h-[70vh] p-14 overflow-scroll relative`}>
                         <Suspense fallback={<Loader />}>
                             <LeetcodeMarkdown mdx={mdx} />
                         </Suspense>
