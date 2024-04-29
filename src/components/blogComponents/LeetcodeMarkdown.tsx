@@ -4,6 +4,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialOceanic as codeboxTheme } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm'
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 interface LeetcodeMarkdownProps {
     mdx: string
@@ -11,8 +13,8 @@ interface LeetcodeMarkdownProps {
 
 const LeetcodeMarkdown:FC<LeetcodeMarkdownProps> = ({mdx}) => {
     return (
-        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[
-            rehypeRaw,
+        <Markdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[
+            rehypeRaw, rehypeKatex
         ]}
             components={{
                 code({ node, inline, className, children, ...props }: any) {
