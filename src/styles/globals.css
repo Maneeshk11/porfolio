@@ -43,3 +43,7 @@ body {
 .toast-position {
   top: -5.5rem !important;
 }
+
+.katex {
+  color: #5cb0f9 !important;
+}
