@@ -47,3 +47,18 @@ body {
 .katex {
   color: #5cb0f9 !important;
 }
+
+@keyframes drop-in {
+  0% {
+    opacity:.2;
+    transform:translateY(-25px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+.animate-drop-in {
+  animation:drop-in .5s cubic-bezier(.21,1.02,.85,.96)
+}
