@@ -1,11 +1,12 @@
 import LeetcodeItem from "./LeetcodeItem"
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 
 import { Problem } from "@/utils/types/interface";
 import { Dialog } from "@headlessui/react";
 import { Inter } from "next/font/google"
 import LeetcodeMarkdown from "./LeetcodeMarkdown";
 import Loader from "../icons/Loader";
+import { useScroll, motion, useTransform } from "framer-motion"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,14 @@ const Leetcode = () => {
     const [title, setTitle] = useState<string>("")
     const [filename, setFilename] = useState<string>("")
     const [mdx, setMdx] = useState<string>("")
+
+    const leetcodeRef = useRef<HTMLDivElement>(null)
+
+    const { scrollYProgress } = useScroll({
+        container: leetcodeRef
+    })
+
+    const pos = useTransform(scrollYProgress, [0, 1], [0, 40])
 
 
     useEffect(() => {
@@ -45,13 +54,23 @@ const Leetcode = () => {
                 <span className="text-2xl md:text-3xl lg:text-4xl font-semibold">LeetCode</span>
                 <button className="border border-white rounded p-2 text-lg font-bold">Filter</button>
             </div>
-            <div className="grid grid-flow-row grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3">
-                {
-                    problems.map((problem, index) => (
-                        <LeetcodeItem key={index} problemType={problem.problemType} title={problem.title} setIsOpen={setIsOpen}
-                            setTitle={setTitle} setFilename={setFilename} filename={problem.filename} />
-                    ))
-                }
+            <div className="relative ">
+                <div ref={leetcodeRef} className="h-[17rem] overflow-y-scroll projectsDiv">
+                    <div className="grid grid-flow-row grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3">
+                        {
+                            problems.map((problem, index) => (
+                                <LeetcodeItem key={index} problemType={problem.problemType} title={problem.title} setIsOpen={setIsOpen}
+                                    setTitle={setTitle} setFilename={setFilename} filename={problem.filename} />
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className="absolute top-[calc(50%-2rem)] -right-4 rounded-full w-2 h-16 bg-[#2e2d2d]">
+                    <div className="w-full h-full relative">
+                        <motion.div className="absolute scroll w-full rounded-full h-6 bg-white"
+                            style={{ top: pos }}></motion.div>
+                    </div>
+                </div>
             </div>
             <Dialog
                 open={isOpen}
