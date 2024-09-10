@@ -8,7 +8,7 @@ const About = () => {
                 <span className="font-semibold text-5xl">Hi, I&apos;m <span className=
                     "font-semibold text-5xl bg-gradient-to-r from-[#ffcbf2] to-[#deaaff] text-transparent bg-clip-text"> Maneesh</span></span>
 
-                <span className="w-4/5 sm:w-fit mx-auto text-wrap sm:text-xl text-center">I am currently an exchange-student at University of Florida. Here&apos;s an <br /> overview of what I&apos;ve been upto in the past 5 years.</span>
+                <span className="w-4/5 sm:w-fit mx-auto text-wrap sm:text-xl text-center">I am a graduate student @ <span className="p-1 font-medium rounded-sm text-white bg-[#57068b]">NYU</span> I am currently seeking <br /> SDE/SWE internship opportunities for the summer of 2025.</span>
             </div>
             <Timeline />
         </div>
