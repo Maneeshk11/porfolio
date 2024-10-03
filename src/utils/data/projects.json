@@ -1,5 +1,12 @@
 [
     {
+        "title": "Latex Resume Formatter",
+        "tags": ["Full-stack"],
+        "description": "Convert your resumes using latex formatted resumes. Smooth UI for user experience. ",
+        "image": "https://portfoliomkaonlel.imgix.net/latex_formatter.png",
+        "link": "https://jake-resume-builder.vercel.app/"
+    },
+    {
         "title": "Library of Data Structures",
         "tags": ["C++"],
         "description": "A repository of a wide range of data structures and algorithms",
